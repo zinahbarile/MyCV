@@ -1,0 +1,320 @@
+/*  Colour Palette
+
+#2B2D42 -   dark blue
+#8D99AE  -   light blue
+#EDF2F4 -   blue/white
+#ed233c -   red
+---------------------------*/
+
+
+/*  Global Syles
+---------------------------*/
+
+/*This allows a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif; /* Declaring the font  for the body, and it was gotten from https://fonts.google.com    */
+    margin: 0; /* This will remove a white space all around the entire web page. If you remove it, you will see a white border all round the page    */
+}
+
+h1, h2 {
+     font-family: 'Caveat', cursive; /* Declaring the font for all h2 and h2 and it was gotten from https://fonts.google.com    */
+     font-weight: 400; /* setting the font weight from the default bold to normal. No significant change when applied    */
+}
+
+h1{
+    font-size: 80px; /* setting the font size for all h1 element on the page to 80px    */
+}
+
+h2 {
+    font-size: 40px; /* setting the font size for all h2 element on the page to 40px    */
+    margin-top: 0; /* removing the margin on top of the h2 element so it doesn't have much space on top of it  */
+}
+/*   */
+h3 {
+    margin: 0;  
+}
+a {
+    color: #ed233c;/* Targeting all the LINKS on the page   */
+}
+a:hover {
+    text-decoration: none; /* This removes the default underline when you hover over any link on the page    */
+}
+header{
+    padding-top: 50px;
+    position: relative;
+}
+
+header, footer {
+    background: #2B2D42; /* Same colour for the header and footer    */
+    color: #8D99AE ; /* Chaning the text colour in the header and footer section    */
+}
+
+
+.download{
+    /* This entire block of codes positions the download button to the right hand side of the page, worked with setting the postion in the parent header to relative    */
+position: absolute;
+bottom: 0;
+right: 0;
+}
+
+
+
+/* Header */
+.profile-img{ 
+
+    width: 300px;
+    height: 350px;
+    border-radius: 50%; /* I used 30% because the image isn't square    */
+} 
+header h1, header h2 {
+    color: #EDF2F4; /* Targeting the H1 and H2 in the header section   */
+    margin: 0; /*  This removes the space between the h1 and h2 headings   */
+} 
+
+
+/*  This accommodates all the element in the body aligned to the left, including the profile photo   */
+
+
+nav {
+    background: white;
+    margin-top: -50px;
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    bottom: 0;
+
+
+    /* left: 0;
+    right: 0; */ /* This will make the navigation span across the page you, can be used in place of width 100%  */
+}
+
+.banner {
+    height: 35px;
+    padding-left: 30px;
+    margin-top: 10px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav li {
+    /* float: left; */
+    margin-right: 25px;
+    list-style-type: none;
+}
+
+nav a {
+    display: inline-block;
+     text-decoration: none;
+     font-size: 14px;
+     color: #2B2D42;
+}
+
+nav a:hover {
+    text-decoration: none; /* This removes the default underline when you hover over any link on the page    */
+    color: red;
+    font-style: bold;
+}
+
+.header-pic img{
+    position: relative;
+  width: 100%;
+}
+
+.image-text {
+    position: absolute;
+    bottom: 160px;
+    left: 260px;
+    color:white;
+    font-size: 30px;
+}
+.header-paragraph {
+    margin-top: 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.header-btn{
+    position: absolute;
+    background: green;
+    color: white;
+    height: 50px;
+    bottom: 80px;
+    left: 260px;
+    border: 10px solid green;
+    text-transform: uppercase;
+    font-size: 16px;
+    width: 200px;
+}
+
+.nav2{
+    background: white;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nav2 ul {
+    display: flex;
+}
+.nav2 ul li {
+    list-style-type: none;
+}
+
+/* .nav2 li {
+    margin-top: 100px;
+    list-style-type: none;
+} */
+
+
+
+
+/* Footer */
+
+footer {
+    text-align: center; /* Aligning the text to the centre of the page     */
+}
+
+
+/* This class was created to wrap just the content so it moves to the center, and the background colour remains the same by spaning across */
+.content-wrap{
+    max-width: 950px; /* The write ups will occupy a maximum width of 950 on the page and no scroll bar will appear under if the window is reduced unlike it just using width  */
+    margin: 0 auto;  /* margin 0 for top and bottom, auto for left and right  */
+    padding: 60px 50px; /* adding a padding of 50px top right bottom left of all the content page to push it inwards from the edge  */
+    overflow: hidden;  
+
+    /* padding was updated and another 50 px top and bottom was added to give space under the nav bar when u click the work experience button */
+}
+
+/*  Header and Footer Syles
+---------------------------*/
+
+ 
+
+/*  Work Experience
+---------------------------*/
+
+.work {
+     background: #EDF2F4;  /* Giving the work experience section it's own colour    */
+}
+
+/* Any paragraph following the h3 header will get its space above removed with the margin 0 */
+h3 ~ p {
+    margin: 0; 
+}
+
+/* 
+This adds space / margin at the bottom of each job job description separating it from the next one */
+.job-description {
+    margin-bottom: 25px;
+}
+
+.job-description p:first-of-type {
+    margin: 0;
+}  /*This style is targeting the first paragraph of JOB description to remove a space appearing on top. Also it affects the first paragraph only */
+
+
+/*  Education 
+---------------------------*/
+
+/* 
+anytime a h3 follows a p, it will automatically add a paragraph to it. As can be seen in the education section because the first header h3 was following a paragraph above it */
+p + h3 {
+    margin-top: 30px;
+}
+
+.education {
+    /* background: #8D99AE;  Giving the job description section it's own colour    */
+    background: linear-gradient(rgba(141, 153, 174, 0.8), rgba(141, 153, 174, 0.5)),
+                url(/work.jpg)no-repeat fixed;
+
+    background-size: cover;
+
+}
+
+
+/* Paddding adds space around the element without moving the actual element    */
+
+/* This contact-info style is targeted at the links in the footer    */
+.contact-info a {
+background-color: white;
+padding: 20px;
+display: inline-block; /* This will make the block of contact to align side by side and not overlap each other     */
+}
+
+
+
+.far{
+    font-size: 30px;
+}
+
+.fab{
+    font-size: 30px;
+}
+.fas{
+    font-size: 30px;
+}
+
+
+/*  Media Queries 
+---------------------------*/
+
+ /*  This media query is used to resize the page to one colum once the view port falls below 900px. The narrow and wide css code was cut and pasted into it  */
+@media(min-width: 900px){
+
+    .col-narrow{
+        width: 35%;
+        float: left;
+        min-height: 175px;  /*This will make the left and right coloum to always be the same height even if one has less content and not over lap each other. If the content is longer than the min-height value, it will continue to flow downwards   */
+    }
+    
+    /*  This accommodates all the element in the body aligned to the right  */
+    .col-wide{
+        width: 65%;
+        float: left;
+        padding-left: 20px;
+        min-height: 175px;
+    }
+
+}
+
+ /*  This target any screen that is 899px or small  */
+@media(max-width:899px ){
+    header{
+        text-align: center;
+    }
+    .profile-img{
+        width: 200px
+    }
+
+    nav a {
+        width: 100%;
+   
+    }
+
+    .far{
+        font-size: 8px;
+    }
+    
+    .fab{
+        font-size: 8px;
+    }
+    .fas{
+        font-size: 8px;
+    }
+    
+
+}
